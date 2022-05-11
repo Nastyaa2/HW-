@@ -82,8 +82,6 @@ void AddInf() {
 	}
 };
 
-
-
 void Delete() {
 
 	system("CLS");
@@ -219,8 +217,6 @@ void showlist() {
 
 };
 
-
-
 void update() {
 	system("CLS");
 
@@ -228,11 +224,7 @@ void update() {
 	cout << "--------------------------------------------------------------------------------------------------------" << endl;
 	cout << " LIST " << endl;
 
-
-
 	int count = 0;
-
-
 
 	cout << "--------------------------------------------------------------------------------------------------------" << endl;
 	cout << "| # |    ID          |       NAME      |            SURNAME          |         BIRTH DATE              |" << endl;
@@ -241,16 +233,13 @@ void update() {
 
 	for (int j = 0; j < maxx; j++) {
 
-
 		if (Addname[j] != "") {
 			count++;
-
 
 			cout << count << ")    " << Idal[j] << mas[j] << "-" << Idal[j] << mas2[j] << "           " << Addname[j] << "               " << Addelastname[j] << "                        " << BirthDate[j] << endl;
 
 
 		}
-
 
 		if (count == 0) {
 
