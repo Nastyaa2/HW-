@@ -506,11 +506,11 @@ int main() {
 			cout << "OPTION NO FOUND!" << endl;  
 			Sleep(550);
 			system("CLS");
-			
+			break;
 
 		}
 
-	} while (option != 5);
+	} 
 	
 
 };
