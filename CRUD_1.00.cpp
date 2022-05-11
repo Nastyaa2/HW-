@@ -2,26 +2,20 @@
 #include <stdlib.h>
 
 #include "windows.h"
-
 using namespace std;
 
 int count = 0;
-
 const int maxx = 100000;
 int mas[maxx];
 int mas2[maxx];
-
 
 string Addelastname[maxx] = { };
 
 string Addname[maxx] = {};
 
-
-
 int Idnum[maxx + 1] = {};
 
 string alf[27] = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K","L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
-
 
 string Idal[maxx + 1] = {};
 
@@ -38,8 +32,6 @@ void AddInf() {
 	char surname[20];
 
 	int max = 1000000;
-
-
 
 	cout << "----------------------------------" << endl;
 	cout << "|           ADD INFO             |   " << endl;
@@ -61,9 +53,6 @@ void AddInf() {
 	cout << "ENTER BIRTH DATE: " << endl;
 
 	cin.getline(date, 10);
-
-
-
 
 	for (int i = 0; i < maxx; i++) {
 
@@ -88,13 +77,8 @@ void AddInf() {
 			Addelastname[i] = surname;
 			BirthDate[i] = date;
 
-
 			break;
-
-
 		}
-
-
 	}
 };
 
@@ -110,11 +94,9 @@ void Delete() {
 	int answer;
 
 
-
 	cout << "--------------------------------------------------------------------------------------------------------" << endl;
 	cout << "| # |    ID          |       NAME      |            SURNAME          |         BIRTH DATE              |" << endl;
 	cout << "--------------------------------------------------------------------------------------------------------" << endl;
-
 
 
 	for (int k = 0; k < maxx; k++) {
@@ -137,8 +119,6 @@ void Delete() {
 			cout << "List is empty!" << endl;
 			break;
 		}
-
-
 
 		cout << "--------------------------------------------------------------------------------------------------------" << endl;
 		cout << "please, enter serial number: " << endl;
@@ -196,16 +176,10 @@ void Delete() {
 		Sleep(1500);
 
 		system("CLS");
-
+		
 	}
 
 };
-
-
-
-
-
-
 
 void showlist() {
 
@@ -213,12 +187,7 @@ void showlist() {
 
 	cout << "--------------------------------------------------------------------------------------------------------" << endl;
 	cout << " LIST " << endl;
-
-
-
 	int count = 0;
-
-
 
 	cout << "--------------------------------------------------------------------------------------------------------" << endl;
 	cout << "| # |    ID          |       NAME      |            SURNAME          |         BIRTH DATE              |" << endl;
@@ -234,11 +203,7 @@ void showlist() {
 
 			cout << count << ")    " << Idal[j] << mas[j] << "-" << Idal[j] << mas2[j] << "           " << Addname[j] << "               " << Addelastname[j] << "                        " << BirthDate[j] << endl;
 
-
 		}
-
-
-
 
 		if (count == 0) {
 
@@ -253,11 +218,6 @@ void showlist() {
 	}
 
 };
-
-
-
-
-
 
 
 
@@ -292,8 +252,6 @@ void update() {
 		}
 
 
-
-
 		if (count == 0) {
 
 			cout << "List is empty!" << endl;
@@ -305,12 +263,6 @@ void update() {
 			break;
 		}
 	}
-
-
-
-
-
-
 
 	for (int k = 0; k < maxx; k++) {
 
@@ -414,24 +366,14 @@ void update() {
 						break;
 					}
 
-
 				}
-
 
 			}
 
-
-
-
 		}
-
 
 	}
 };
-
-
-
-
 
 
 
@@ -444,10 +386,7 @@ int main() {
 
 	system("CLS");
 
-
-
 	int count = 0;
-
 
 
 	do {
@@ -463,13 +402,7 @@ int main() {
 
 		cout << "3 - UPDATE INFO" << endl;
 
-		cout << "4 - DELELE INFO" << endl;
-
-	
-
-
-
-
+		cout << "4 - DELELE INFO" << endl
 
 		cout << "--------------------------------------------------------------------------------------------------------" << endl;
 
@@ -479,9 +412,6 @@ int main() {
 
 
 		switch (option) {
-
-
-
 
 		case 1: AddInf();
 			system("CLS");
@@ -495,13 +425,10 @@ int main() {
 
 			system("CLS");
 			break;
-
 		case 4:
-
 			Delete();
 
 			break;
-
 
 		default:
 			cout << "" << endl;
@@ -510,7 +437,6 @@ int main() {
 			Sleep(550);
 			break;
 			
-
 		}
 
 	} while (option != 6);
