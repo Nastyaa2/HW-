@@ -37,12 +37,9 @@ void AddInf() {
 	cout << "|           ADD INFO             |   " << endl;
 	cout << "----------------------------------" << endl;
 
-
 	cin.ignore();
 
-
 	cout << "ENTER NAME: " << endl;
-
 
 	cin.getline(name, 50);
 
@@ -56,7 +53,6 @@ void AddInf() {
 
 	for (int i = 0; i < maxx; i++) {
 
-
 		int count = 0;
 
 		int min = 1000;
@@ -65,7 +61,6 @@ void AddInf() {
 		srand(time(0));
 
 		if (Addname[i] == "") {
-
 
 			int randindx = rand() % (sizeof(alf) / sizeof(alf[0]));
 			Idal[i] = alf[randindx];
@@ -90,20 +85,15 @@ void Delete() {
 
 	int search;
 	int answer;
-
-
 	cout << "--------------------------------------------------------------------------------------------------------" << endl;
 	cout << "| # |    ID          |       NAME      |            SURNAME          |         BIRTH DATE              |" << endl;
 	cout << "--------------------------------------------------------------------------------------------------------" << endl;
-
 
 	for (int k = 0; k < maxx; k++) {
 
 		if (Addname[k] != "") {
 			for (int h = 0; h < maxx; h++) {
 				count++;
-
-
 				cout << count << ")    " << Idal[h] << mas[h] << "-" << Idal[h] << mas2[h] << "           " << Addname[h] << "               " << Addelastname[h] << "                        " << BirthDate[h] << endl;
 
 				if (Addname[h] == "") {
@@ -159,8 +149,6 @@ void Delete() {
 			break;
 
 		}
-
-
 		else if (answer == 2) {
 			system("CLS");
 			break;
@@ -173,8 +161,7 @@ void Delete() {
 		cout << "List is empty!" << endl;
 		Sleep(1500);
 
-		system("CLS");
-		
+		system("CLS");	
 	}
 
 };
@@ -190,8 +177,6 @@ void showlist() {
 	cout << "--------------------------------------------------------------------------------------------------------" << endl;
 	cout << "| # |    ID          |       NAME      |            SURNAME          |         BIRTH DATE              |" << endl;
 	cout << "--------------------------------------------------------------------------------------------------------" << endl;
-
-
 	for (int j = 0; j < maxx; j++) {
 
 
@@ -229,8 +214,6 @@ void update() {
 	cout << "--------------------------------------------------------------------------------------------------------" << endl;
 	cout << "| # |    ID          |       NAME      |            SURNAME          |         BIRTH DATE              |" << endl;
 	cout << "--------------------------------------------------------------------------------------------------------" << endl;
-
-
 	for (int j = 0; j < maxx; j++) {
 
 		if (Addname[j] != "") {
@@ -254,8 +237,6 @@ void update() {
 	}
 
 	for (int k = 0; k < maxx; k++) {
-
-
 		int search;
 
 		string newinfo;
@@ -287,9 +268,6 @@ void update() {
 
 			cout << " Do you want to change this NAME ?" << endl;
 			cout << "|1 - YES|       |2 - NO|" << endl;
-
-
-
 			int answer;
 			cin >> answer;
 
@@ -304,7 +282,6 @@ void update() {
 				break;
 
 			}
-
 
 			else if (answer == 2) {
 
@@ -326,7 +303,6 @@ void update() {
 
 					Sleep(800);
 					break;
-
 				}
 
 				else if (answer2 == 2) {
@@ -347,8 +323,6 @@ void update() {
 
 						Sleep(800);
 						break;
-
-
 					}
 
 					if (answer3 == 2) {
@@ -364,8 +338,6 @@ void update() {
 	}
 };
 
-
-
 int main() {
 
 	int option;
@@ -374,10 +346,7 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 
 	system("CLS");
-
 	int count = 0;
-
-
 	do {
 
 		cout << "--------------------------------------------------------------------------------------------------------" << endl;
@@ -397,9 +366,7 @@ int main() {
 
 		cout << "Choose any option: ";
 		cin >> option;
-
-
-
+		
 		switch (option) {
 
 		case 1: AddInf();
